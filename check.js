@@ -35,9 +35,10 @@ set_province = "xx省/市"; // 例如 "北京市"；"广东省";
 
 userdata = {"username": username, "password": password};
 
-login_url = "https://app.buaa.edu.cn/uc/wap/login/check";
-info_url = "https://app.buaa.edu.cn/buaaxsncov/wap/default/get-info";
-save_url = "https://app.buaa.edu.cn/buaaxsncov/wap/default/save";
+main_app = "https://app.buaa.edu.cn"
+login_url = main_app + "/uc/wap/login/check";
+info_url = main_app + "/buaaxsncov/wap/default/get-info";
+save_url = main_app + "/buaaxsncov/wap/default/save";
 
 notify = new Notification();
 notify.title = "北航师生报平安系统";
@@ -107,10 +108,10 @@ async function check() {
         "realname": "", "number": "", "uid": "", "created": "",
         "date": "", "id": ""
     };
-    if (boarder === 0) {
+    if (boarder === "0") {
         save_data["sfzs"] = "0";
         save_data["bzxyy"] = not_boarder_reasen;
-        if (not_boarder_reasen === 5) {
+        if (not_boarder_reasen === "5") {
             save_data["bzxyy_other"] = not_boarder_note;
         }
         save_data["area"] = set_area;
