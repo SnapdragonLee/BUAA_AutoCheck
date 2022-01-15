@@ -104,7 +104,7 @@ async function check() {
         "szdd": "1", "area": "",
         "city": "", "province": "",
         "address": "",
-        "gwdz": "", "is_move": "0", "move_reason": "", "move_remark": "",
+        "gwdz": "", "is_move": "", "move_reason": "", "move_remark": "",
         "realname": "", "number": "", "uid": "", "created": "",
         "date": "", "id": ""
     };
