@@ -4,19 +4,19 @@
 
 username = ""; // 北航统一认证账号;
 password = ""; // 登陆密码;
-boarder = "0"; // 是否在校住宿; 是 "1"，否 "0". 若为 "0", 填写下一项;
-not_boarder_reasen = "1"; /* 若 boarder 为 "0", 请选数字: {
-                                "0", 临时出校;
-                                "1", 寒暑假返乡;
-                                "2", 在境外科研学习;
-                                "3", 在境内校外出差、实习;
-                                "4", 病假、事假或休学中;
-                                "5", 其他;
+boarder = ""; // 是否在校住宿; 是 "1"，否 "0". 若为 "0", 填写下一项;
+not_boarder_reasen = ""; /* 若 boarder 为 "0", 请选数字: {
+                                "1", 临时出校;
+                                "2", 寒暑假返乡;
+                                "3", 在境外科研学习;
+                                "4", 在境内校外出差、实习;
+                                "5", 病假、事假或休学中;
+                                "6", 其他;
                             }
-                            若选 "5"，填写下一项;
+                            若选 "6"，填写下一项;
                          */
 
-not_boarder_note = ""; // 若 not_boarder_reason 为 "5" (其他)，则要填写原因;
+not_boarder_note = ""; // 若 not_boarder_reason 为 "6" (其他)，则要填写原因;
 
 /* 北航地址 */
 boarder_address = "北京市海淀区花园路街道北京航空航天大学大运村学生公寓5号楼";
@@ -111,7 +111,7 @@ async function check() {
     if (boarder === "0") {
         save_data["sfzs"] = "0";
         save_data["bzxyy"] = not_boarder_reasen;
-        if (not_boarder_reasen === "5") {
+        if (not_boarder_reasen === "6") {
             save_data["bzxyy_other"] = not_boarder_note;
         }
         save_data["area"] = set_area;
