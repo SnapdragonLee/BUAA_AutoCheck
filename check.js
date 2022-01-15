@@ -5,7 +5,7 @@
 username = ""; // 北航统一认证账号;
 password = ""; // 登陆密码;
 boarder = "0"; // 是否在校住宿; 是 "1"，否 "0". 若为 "0", 填写下一项;
-not_boarder_reasen = "1"; /* 若 boarder为 1, 请选数字: {
+not_boarder_reasen = "1"; /* 若 boarder 为 "0", 请选数字: {
                                 "0", 临时出校;
                                 "1", 寒暑假返乡;
                                 "2", 在境外科研学习;
@@ -13,7 +13,7 @@ not_boarder_reasen = "1"; /* 若 boarder为 1, 请选数字: {
                                 "4", 病假、事假或休学中;
                                 "5", 其他;
                             }
-                            若为 "5"，填写下一项;
+                            若选 "5"，填写下一项;
                          */
 
 not_boarder_note = ""; // 若 not_boarder_reason 为 "5" (其他)，则要填写原因;
