@@ -66,7 +66,7 @@ async function check() {
 
     if (resp.statusCode !== 200) {
         console.log("Login failed.");
-        notify.body = "登陆失败";
+        notify.body = "登陆失败！\n账号或密码错误";
         return false;
     }
 
@@ -85,7 +85,7 @@ async function check() {
 
     if (req_info.response.statusCode !== 200) {
         console.log("Rediret failed.");
-        notify.body = "获取信息失败";
+        notify.body = "获取信息失败！\n请检查网络环境，或稍后再试一次";
         return false;
     }
 
@@ -140,7 +140,7 @@ async function check() {
     var resp_json = await req_save.loadJSON();
 
     console.log(resp_json);
-    notify.body = "请求上传成功！\n" + resp_json["m"];
+    notify.body = "请求上传成功！ 填报人：" + save_data["realname"] + "\n" + resp_json["m"];
     return true;
 }
 
