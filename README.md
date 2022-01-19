@@ -8,6 +8,10 @@
 
 
 
+------
+
+
+
 ### Needs
 
 ###### iOS/iPadOS ：
@@ -24,6 +28,10 @@
 
 - 任意可以安装 Python3.x 的 OS ( `Windows, Linux/UNIX, macOS, Android, iOS/iPadOS` )
 - Python3.x
+
+
+
+------
 
 
 
@@ -69,6 +77,10 @@
 - iOS/iPadOS ：在 App Store 内下载 `iSH`，更新应用内的 Alpine Linux ，之后安装 Python3 和 BusyBox，再按照 Linux Series 所述的方法进行部署；
 
 - *Android ：可使用 `QPython 3H` 等应用的 Python 便携环境，经过 pip 部署包后，进行使用，但暂时没有自动脚本的解决方案，如有人有其他解决方案，可发起 issue 一起讨论。
+
+
+
+------
 
 
 
