@@ -59,7 +59,7 @@
 
 
 
-###### Python 3.x :
+###### Python3.x :
 
 **Simply Run :**
 
