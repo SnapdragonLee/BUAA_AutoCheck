@@ -138,5 +138,6 @@ async function check() {
 }
 
 await check();
+
 notify.schedule();
 Script.complete();
