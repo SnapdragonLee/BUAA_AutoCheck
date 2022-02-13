@@ -44,7 +44,7 @@ print("北航师生报平安系统")
 
 
 def out(str):
-    print(time.strftime('%Y.%m.%d %H:%M:%S: ', time.localtime(time.time())) + str)
+    print(time.strftime("%Y.%m.%d %H:%M:%S: ", time.localtime(time.time())) + str)
 
 
 def encode_formdata(obj):
