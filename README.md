@@ -30,6 +30,9 @@
 - Python3.x
 
 
+###### Auto.js ：
+
+- 可以安装 Auto.js 的 Android 系统设备
 
 ------
 
@@ -78,6 +81,21 @@
 
 - *Android ：可使用 `QPython 3H` 等应用的 Python 便携环境，经过 pip 部署包后，进行使用，但暂时没有自动脚本的解决方案，如有人有其他解决方案，可发起 issue 一起讨论。
 
+
+###### Auto.js :
+
+**Simply Run :**
+
+1. 安装 Auto.js Pro，需要 45 RMB，官网下载即可 https://pro.autojs.org/；
+2. 不想花钱的可以去 https://github.com/hyb1996/Auto.js 自行下载源码编译；
+3. 下载 Auto.js 文件夹里的两个 `.js` 文件到设备中，点击 Auto.js 主页面右下角选择导入，选择导入两个文件即可；
+4. 将 `buaaCheckAutoJS.js` 的 32 行前的内容一次性改好（根据注释填写，有的栏没说写什么就不用写）；
+5. 在校内或校外只需要更改 `boarder` 的值就好，在校就在双引号内填 1，不在校就填 0。一次设置，长时间使用；
+6. 执行一遍脚本查看请求是否上传成功，若不成功，可根据报错信息查找原因。
+
+**Auto Check :**
+1. Auto.js 主页面选择 `buaaCheckAutoJS.js` 右侧三点打开菜单，点击设置任务；
+2. 选择每天运行并定时，右上角确认即可。
 
 
 ------
