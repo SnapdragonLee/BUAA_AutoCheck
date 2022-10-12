@@ -39,21 +39,22 @@ info_url = main_app + "/buaaxsncov/wap/default/get-info";
 save_url = main_app + "/buaaxsncov/wap/default/save";
 
 function ParseSetCookie(a) { // 正则表达式处理Set-Cookie
-    var arr = a.replace(/expires=(.*?)GMT/g,function($1) {
+    var arr = a.replace(/expires=(.*?)GMT/g, function ($1) {
         return "expires=" + new Date($1).getTime();
     }).split(", ");
- 
+
     var cookies = [];
-	for(var i=0;i<arr.length;i++)
-	{
-		let cookie = parse(/([^=;\s]+)=([^;]+);?/g, arr[i].replace(/; httponly/g, "$&=true"));
-		cookies.push(cookie);
-	}
+    for (var i = 0; i < arr.length; i++) {
+        let cookie = parse(/([^=;\s]+)=([^;]+);?/g, arr[i].replace(/; httponly/g, "$&=true"));
+        cookies.push(cookie);
+    }
+
     function parse(reg, text) {
         if (!reg || !text) return {}
         let res = reg.exec(text);
-        return res[1]+'='+res[2];
+        return res[1] + '=' + res[2];
     }
+
     return cookies.join('; ');
 }
 
@@ -71,7 +72,7 @@ function check() {
     var login = http.post(login_url, userdata, login_options);
     if (login.statusCode !== 200) {
         console.log("Login failed.");
-        nn.send('北航师生报平安系统','登陆失败！\n账号或密码错误','');
+        nn.send('北航师生报平安系统', '登陆失败！\n账号或密码错误', '');
     }
     console.log("Login success!");
     // console.log(login.headers['Set-Cookie'].join(', '));
@@ -82,11 +83,11 @@ function check() {
         headers: {"Content-Type": "application/x-www-form-urlencoded", Cookie: session},
     }
 
-    var req_info = http.get(info_url,info_options);
+    var req_info = http.get(info_url, info_options);
 
     if (req_info.statusCode !== 200) {
         console.log("Rediret failed.");
-        nn.send('北航师生报平安系统','获取信息失败！\n请检查网络环境，或稍后再试一次','');
+        nn.send('北航师生报平安系统', '获取信息失败！\n请检查网络环境，或稍后再试一次', '');
         return false;
     }
 
@@ -150,7 +151,7 @@ function check() {
 
     console.log(req_save.body.string());
     resp_json = JSON.parse(req_save.body.string());
-    nn.send('北航师生报平安系统',"请求上传成功！ 填报人：" + save_data["realname"] + "\n" + resp_json["m"],'');
+    nn.send('北航师生报平安系统', "请求上传成功！ 填报人：" + save_data["realname"] + "\n" + resp_json["m"], '');
 
     return true;
 }

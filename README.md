@@ -1,16 +1,14 @@
-## BUAA AutoCheck V1.50.1
+## BUAA AutoCheck V1.60
 
-北航健康打卡自动插件，现可在 **任意可安装 Python3 的操作系统** 或 **iOS/iPadOS 12.0 及更新** 中进行部署。
+北航健康打卡自动插件，现可在 **任意可安装 Python3 的操作系统** 、 **iOS/iPadOS 12.0 及更新** 或 有 **Auto.js 的安卓设备** 中进行部署。
 
 
 
-*注意：**Android** 也可以部署 Python3.x 脚本，但无法部署定时自动任务，如有想法可以发起 Issue 进行讨论。
+*注意：目前 **Android 搭配 Auto.js 应用** 可以完成定时自动打卡任务，在这里感谢 KZdavid 提交的方案。有其它问题欢迎提交 issue！
 
 
 
 ------
-
-
 
 ### Needs
 
@@ -22,21 +20,18 @@
 - 捷径 (Shortcuts)
 - Scriptable 1.3.3 or up
 
-
-
 ###### Python3.x ：
 
 - 任意可以安装 Python3.x 的 OS ( `Windows, Linux/UNIX, macOS, Android, iOS/iPadOS` )
 - Python3.x
 
-
 ###### Auto.js ：
 
 - 可以安装 Auto.js 的 Android 系统设备
 
+  
+
 ------
-
-
 
 ### Deployment
 
@@ -79,30 +74,29 @@
 - Windows ：任务计划程序 (Task Scheduler)；
 - iOS/iPadOS ：在 App Store 内下载 `iSH`，更新应用内的 Alpine Linux ，之后安装 Python3 和 BusyBox，再按照 Linux Series 所述的方法进行部署；
 
-- *Android ：可使用 `QPython 3H` 等应用的 Python 便携环境，经过 pip 部署包后，进行使用，但暂时没有自动脚本的解决方案，如有人有其他解决方案，可发起 issue 一起讨论。
 
 
 ###### Auto.js :
 
 **Simply Run :**
 
-1. 安装 Auto.js Pro，需要 45 RMB，官网下载即可 https://pro.autojs.org/；
-2. 不想花钱的可以去 https://github.com/hyb1996/Auto.js 自行下载源码编译；
-3. 下载 Auto.js 文件夹里的两个 `.js` 文件到设备中，点击 Auto.js 主页面右下角选择导入，选择导入两个文件即可；
-4. 将 `buaaCheckAutoJS.js` 的 32 行前的内容一次性改好（根据注释填写，有的栏没说写什么就不用写）；
-5. 在校内或校外只需要更改 `boarder` 的值就好，在校就在双引号内填 1，不在校就填 0。一次设置，长时间使用；
-6. 执行一遍脚本查看请求是否上传成功，若不成功，可根据报错信息查找原因。
+1. 安装 Auto.js Pro，需要 45 RMB，官网下载即可 https://pro.autojs.org/ ，不想花钱的可以去 https://github.com/hyb1996/Auto.js 自行下载源码编译 ~~（或者可以有crack之类的方式）~~；
+2. 下载 AutoJs 文件夹里的两个 `.js` 文件到设备中，点击 Auto.js 主页面右下角选择导入，选择导入两个文件即可；
+3. 将 `buaaCheckAutoJS.js` 的 32 行前的内容一次性改好（根据注释填写，有的栏没说写什么就不用写）；
+4. 在校内或校外只需要更改 `boarder` 的值就好，在校就在双引号内填 1，不在校就填 0。一次设置，长时间使用；
+5. 执行一遍脚本查看请求是否上传成功，若不成功，可根据报错信息查找原因。
 
 **Auto Check :**
 1. Auto.js 主页面选择 `buaaCheckAutoJS.js` 右侧三点打开菜单，点击设置任务；
 2. 选择每天运行并定时，右上角确认即可。
 
 
+
 ------
 
-
-
 ### Logs
+
+- 2022.10.12 V1.60 感谢 **KZdavid** 提供的 Auto.js 的脚本，为安卓的自动化打卡增添了新的方式。
 
 - 2022.2.13 V1.50.1 无新功能加入，仅修复程序结构与格式。
 
@@ -114,7 +108,7 @@
 
 - 2022.1.16 V1.13 紧急修复判断类型的问题，以及 POST 请求格式的修复，并修改数据样式。
 
-- 2022.1.15 V1.1 修复校内外签到注释有误的问题，并进行了开放测试。
+- 2022.1.15 V1.10 修复校内外签到注释有误的问题，并进行了开放测试。
 
 - 2022.1.15 V1.09 内测版，修复乱码以及通知栏显示信息过多的问题。
 
